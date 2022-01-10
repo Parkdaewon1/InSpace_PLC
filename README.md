@@ -65,7 +65,7 @@ ServerResponse["command"] # [불러올 변수명]
 requests.patch(Web_IP+Station_id, json = {'runningStatus':'CONTROL_STATUS_CLOSE'}) #(address, 바꿀부분)
 ```
 
-## Trouble Shooting
+## 5. Trouble Shooting
 ### 연결거부 문제
 > server computer에서 연결을 거부하였거나 PLC 보드의 연결이 불확실한 경우. 대부분 후자의 경우로 이더넷 설정을 검토하면 해결. 전자의 경우 연결을 허용하여 주면 해결
 ### 윈도우 pip 설치
