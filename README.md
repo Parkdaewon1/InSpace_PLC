@@ -6,11 +6,14 @@
 
 ### 1) Board IP 설정
 TCPPORT-30M은 딥스위치로 간단히 IP를 설정가능. TCPPORT-30M의 IP는 192.168.2xx 으로 고정되어 있고 사용자는 IP주소의 네번째 자리를 200~215번까지 딥스위치로 설정. 4개의 딥스위치는 각각 8,4,2,1값(2진수)으로 구성. 만약 IP를 192.168.0.200로 만든 다면 전부 OFF
+
 ![image](https://user-images.githubusercontent.com/38932208/148735067-9abbaa7b-d3ab-4776-83f7-b2e2381b14e8.png)
-  * GATE WAY: 192.168.0.1, SUBNET MASK: 255.255.255.0, PORT: 502 으로 고정이며 사용자가 변경 불가
+
+* GATE WAY: 192.168.0.1, SUBNET MASK: 255.255.255.0, PORT: 502 으로 고정이며 사용자가 변경 불가
 
 ### 2) 컴퓨터 IP 설정
 인터넷 프로토콜 버젼 4(TCP/IPv4)속성을 아래 그림과 같이 수정. 여기서 IP주소는 192.168.0.2~199값 임의로 사용
+
 ![image](https://user-images.githubusercontent.com/38932208/148735886-023cb09a-637b-4a8e-ab8e-a41ff0e09b72.png)
   
 ## 2. Python Module
@@ -30,4 +33,22 @@ pip install pyinstaller
 ```
 pyinstaller 파일이름.py
 pyinstaller --onfile 파일이름.py
+```
+
+## 4. 사용하는 코드 설명
+### Modbus
+본 코드에서 PLC보드와 컴퓨터간의 연결에는 크게 연결, Input 데이터 읽기, Output 데이터 쓰기 사용. pwm은 사용하지 않기 때문에 register 사용 x
+* 연결
+```python
+c = ModbusTcpClient(PLC_IP, port=502)
+c.connect()
+c.close()
+```
+* Input 데이터 읽기 (0~15까지. write불가)
+```python
+c.read_coils(0,8).bits[0] # (Input address, The number of coils to read)
+```
+* Output 데이터 쓰기 (16~23까지. read불가)
+```python
+c.write_coil(16,True) # (Output address, value)
 ```
