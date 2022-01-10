@@ -9,6 +9,6 @@
 
 ![image](https://user-images.githubusercontent.com/38932208/148735067-9abbaa7b-d3ab-4776-83f7-b2e2381b14e8.png)
 
-  * GATE WAY: 192.168.0.1, SUBNET MASK: 255.255.255.0, PORT: 502 으로 고정이며 사용자가 변경 불가 >
+  * GATE WAY: 192.168.0.1, SUBNET MASK: 255.255.255.0, PORT: 502 으로 고정이며 사용자가 변경 불가
 
 ### IP 설정
