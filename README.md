@@ -1,4 +1,4 @@
-# InSpace_PLC_Server 설정
+# InSpace_PLC_Station 설정
 
 ## 1. TCPPORT-30M 초기 설정방법
 
