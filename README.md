@@ -29,5 +29,5 @@ pip install pyinstaller
 * 명령어
 ```
 pyinstaller 파일이름.py
-pyinstaller --onfile 파일이름.py # 하나의 파일로 변환해줌()
+pyinstaller --onfile 파일이름.py
 ```
