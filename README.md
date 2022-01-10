@@ -11,9 +11,9 @@
 
 ### 2) 컴퓨터 IP 설정
   인터넷 프로토콜 버젼 4(TCP/IPv4)속성을 아래 그림과 같이 수정. 여기서 IP주소는 192.168.0.2~199값 임의로 사용
-  ![image](https://user-images.githubusercontent.com/38932208/148735886-023cb09a-637b-4a8e-ab8e-a41ff0e09b72.png)
+![image](https://user-images.githubusercontent.com/38932208/148735886-023cb09a-637b-4a8e-ab8e-a41ff0e09b72.png)
   
-## 2. Python 필요모듈
+## 2. Python Module
 ```python
 from pymodbus.client.sync import ModbusTcpClient
 import requests
@@ -24,4 +24,14 @@ import json
 pip install pymodbus
 pip install requests
 pip install json
+```
+
+## 3. exe 파일 변환
+```
+pip install pyinstaller
+```
+  pyinstaller를 이용하여 파일변환 가능.
+```
+pyinstaller 파일이름.py
+pyinstaller --onfile 파일이름.py # 하나의 파일로 변환해줌()
 ```
