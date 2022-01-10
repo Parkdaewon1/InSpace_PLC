@@ -1,4 +1,4 @@
-# InSpace_PLC_Server 설정 및 코드정리
+# InSpace_PLC_Server 설정
 
 ## 1. TCPPORT-30M 초기 설정방법
 
@@ -14,11 +14,6 @@
 ![image](https://user-images.githubusercontent.com/38932208/148735886-023cb09a-637b-4a8e-ab8e-a41ff0e09b72.png)
   
 ## 2. Python Module
-```python
-from pymodbus.client.sync import ModbusTcpClient
-import requests
-import json
-```
   pymodbus, requests, json 모듈 각각 pip을 이용하여 설치
 ```
 pip install pymodbus
@@ -27,10 +22,11 @@ pip install json
 ```
 
 ## 3. exe 파일 변환
+  pyinstaller를 이용하여 파일변환 가능. 역시 pip을 이용하여 설치
 ```
 pip install pyinstaller
 ```
-  pyinstaller를 이용하여 파일변환 가능.
+  * 명령어
 ```
 pyinstaller 파일이름.py
 pyinstaller --onfile 파일이름.py # 하나의 파일로 변환해줌()
