@@ -2,8 +2,6 @@
 
 ## 1. TCPPORT-30M 초기 설정방법
 
-###### 출처 http://comfilewiki.co.kr/ko/doku.php?id=tcpport:%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EB%A7%9D_%EA%B5%AC%EC%84%B1%EA%B3%BC_ip%EC%84%A4%EC%A0%95:index
-
 ### 1) Board IP 설정
 TCPPORT-30M은 딥스위치로 간단히 IP를 설정가능. TCPPORT-30M의 IP는 192.168.2xx 으로 고정되어 있고 사용자는 IP주소의 네번째 자리를 200~215번까지 딥스위치로 설정. 4개의 딥스위치는 각각 8,4,2,1값(2진수)으로 구성. 만약 IP를 192.168.0.200로 만든 다면 전부 OFF
 
@@ -15,6 +13,7 @@ TCPPORT-30M은 딥스위치로 간단히 IP를 설정가능. TCPPORT-30M의 IP�
 인터넷 프로토콜 버젼 4(TCP/IPv4)속성을 아래 그림과 같이 수정. 여기서 IP주소는 192.168.0.2~199값 임의로 사용
 
 ![image](https://user-images.githubusercontent.com/38932208/148735886-023cb09a-637b-4a8e-ab8e-a41ff0e09b72.png)
+###### 내용출처 http://comfilewiki.co.kr/ko/doku.php?id=tcpport:%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC%EB%A7%9D_%EA%B5%AC%EC%84%B1%EA%B3%BC_ip%EC%84%A4%EC%A0%95:index
   
 ## 2. Python Module
 pymodbus, requests, json 모듈 각각 pip을 이용하여 설치
@@ -69,9 +68,9 @@ requests.patch(Web_IP+Station_id, json = {'runningStatus':'CONTROL_STATUS_CLOSE'
 ### 연결거부 문제
 > server computer에서 연결을 거부하였거나 PLC 보드의 연결이 불확실한 경우. 대부분 후자의 경우로 이더넷 설정을 검토하면 해결. 전자의 경우 연결을 허용하여 주면 해결
 ### 윈도우 pip 설치
-> https://blog.naver.com/larysa/222499026621
+> https://blog.naver.com/larysa/222499026621 참고
 ### python 경로 설정
-> https://blog.naver.com/hwangsh20/222507848257
+> https://blog.naver.com/hwangsh20/222507848257 
 > * 추가로 python을 설치할 때 설정해 주어도 됨.
 > ![image](https://user-images.githubusercontent.com/38932208/148741673-c72bbe71-a16a-42c1-a221-cbb7b606d951.png)
 #### 진행에 따라 추가예정
