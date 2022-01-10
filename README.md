@@ -66,7 +66,7 @@ requests.patch(Web_IP+Station_id, json = {'runningStatus':'CONTROL_STATUS_CLOSE'
 
 ## 5. Trouble Shooting
 ### 연결거부 문제
-> server computer에서 연결을 거부하였거나 PLC 보드의 연결이 불확실한 경우. 대부분 후자의 경우로 이더넷 설정을 검토하면 해결. 전자의 경우 연결을 허용하여 주면 해결
+> server computer에서 연결을 거부하였거나 PLC 보드의 연결이 불확실한 경우. 대부분 후자의 경우로 이더넷 설정을 검토 혹은 코드 내 PLC 보드 주소 검토하면 해결. 전자의 경우 연결을 허용 혹은 코드내 주소 검토하면 해결
 ### 윈도우 pip 설치
 > https://blog.naver.com/larysa/222499026621 참고
 ### python 경로 설정
