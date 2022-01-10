@@ -72,6 +72,6 @@ requests.patch(Web_IP+Station_id, json = {'runningStatus':'CONTROL_STATUS_CLOSE'
 > https://blog.naver.com/larysa/222499026621
 ### python 경로 설정
 > https://blog.naver.com/hwangsh20/222507848257
-> 추가로 python을 설치할 때 설정해 주어도 됨.
+> * 추가로 python을 설치할 때 설정해 주어도 됨.
 > ![image](https://user-images.githubusercontent.com/38932208/148741673-c72bbe71-a16a-42c1-a221-cbb7b606d951.png)
 #### 진행에 따라 추가예정
