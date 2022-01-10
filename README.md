@@ -52,3 +52,26 @@ c.read_coils(0,8).bits[0] # (Input address, The number of coils to read)
 ```python
 c.write_coil(16,True) # (Output address, value)
 ```
+
+### REST API
+본 코드에서 주로 사용하는 기능은 get(값 받아오기), patch(값 갱신하기)
+* Get
+```python
+requests.get(Web_IP+Station_id).json() # (address).json 형태
+ServerResponse["command"] # [불러올 변수명]
+```
+* Patch
+```python
+requests.patch(Web_IP+Station_id, json = {'runningStatus':'CONTROL_STATUS_CLOSE'}) #(address, 바꿀부분)
+```
+
+## Trouble Shooting
+### 연결거부 문제
+> server computer에서 연결을 거부하였거나 PLC 보드의 연결이 불확실한 경우. 대부분 후자의 경우로 이더넷 설정을 검토하면 해결. 전자의 경우 연결을 허용하여 주면 해결
+### 윈도우 pip 설치
+> https://blog.naver.com/larysa/222499026621
+### python 경로 설정
+> https://blog.naver.com/hwangsh20/222507848257
+> 추가로 python을 설치할 때 설정해 주어도 됨.
+> ![image](https://user-images.githubusercontent.com/38932208/148741673-c72bbe71-a16a-42c1-a221-cbb7b606d951.png)
+#### 진행에 따라 추가예정
