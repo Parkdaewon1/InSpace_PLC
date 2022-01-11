@@ -67,11 +67,14 @@ requests.patch(Web_IP+Station_id, json = {'runningStatus':'CONTROL_STATUS_CLOSE'
 ## 5. Trouble Shooting
 ### 연결거부 문제
 > server computer에서 연결을 거부하였거나 PLC 보드의 연결이 불확실한 경우. 먼저 대부분은 후자의 경우로 이더넷 설정을 검토 혹은 코드 내 PLC 보드 주소 검토하여 보고 해결이 되지않을 경우 Server Computer에서 코드 설치 컴퓨터의 연결을 허용 혹은 코드내 주소 검토하면 해결
-> > 추가적으로 오피스키퍼가 설치된 컴퓨터에서는 PLC보드 이더넷연결이 차단됨을 확인
+> > *추가적으로 오피스키퍼가 설치된 컴퓨터에서는 PLC보드 이더넷연결이 차단됨을 확인
+
 ### 윈도우 pip 설치
 > https://blog.naver.com/larysa/222499026621 참고
+
 ### python 경로 설정
 > https://blog.naver.com/hwangsh20/222507848257 참고
 > * 추가로 python을 설치할 때 설정해 주어도 됨.
 > ![image](https://user-images.githubusercontent.com/38932208/148741673-c72bbe71-a16a-42c1-a221-cbb7b606d951.png)
+
 #### 진행에 따라 추가예정
