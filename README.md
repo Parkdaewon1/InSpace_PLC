@@ -56,7 +56,7 @@ c.write_coil(16,True) # (Output address, value)
 본 코드에서 주로 사용하는 기능은 get(값 받아오기), patch(값 갱신하기)
 * Get
 ```python
-requests.get(Web_IP+Station_id).json() # (address).json 형태
+ServerResponse = requests.get(Web_IP+Station_id).json() # (address).json 형태
 ServerResponse["command"] # [불러올 변수명]
 ```
 * Patch
@@ -77,4 +77,4 @@ requests.patch(Web_IP+Station_id, json = {'runningStatus':'CONTROL_STATUS_CLOSE'
 > * 추가로 python을 설치할 때 설정해 주어도 됨.
 > ![image](https://user-images.githubusercontent.com/38932208/148741673-c72bbe71-a16a-42c1-a221-cbb7b606d951.png)
 
-#### 진행에 따라 추가예정
+##### * 진행에 따라 추가예정
